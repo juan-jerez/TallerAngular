@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Angular</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row mt-3">
+             <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="h3 p-3">Series</div>
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Channel</th>
+                                    <th>Seasons</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let serie of datos">
+                                    <td>{{serie.id }}</td>
+                                    <td>{{ serie.name }}</td>
+                                    <td>{{ serie.channel }}</td>
+                                    <td>{{ serie.seasons }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row justify-content-end">
+                            <h5 class="col-4"><strong>Seasons average:</strong></h5>
+                            <h5 class="col-4"><strong> {{ getPromedioTemporadas() }}</strong></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
